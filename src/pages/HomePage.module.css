@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    /* color: black; */
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main Content - Flexbox for responsiveness */
+.mainContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    width: 90%;
+    padding-top: 150px;
+}
+
+/* Logo Styling */
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 270px;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transform: rotate(180deg);
+    filter: drop-shadow(0 0 20px rgba(102, 51, 153, 0.8));
+}
+
+/* Text Content Styling */
+.textContent {
+    max-width: 750px;
+    padding: 20px;
+    text-align: center;
+}
+
+.textContent h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 47px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.textContent p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 10%;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* ✅ Make the design responsive */
+@media (max-width: 1024px) {
+    .mainContent {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .textContent h1 {
+        font-size: 32px;
+    }
+
+    .textContent p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContent {
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .textContent {
+        max-width: 100%;
+    }
+
+    .textContent h1 {
+        font-size: 28px;
+    }
+
+    .textContent p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .textContent h1 {
+        font-size: 24px;
+    }
+
+    .textContent p {
+        font-size: 0.85rem;
+    }
+
+    .logo {
+        width: 150px;
+    }
+}
