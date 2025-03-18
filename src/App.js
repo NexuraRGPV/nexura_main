@@ -1,3 +1,5 @@
+
+import { useState, useEffect } from 'react';
 import './App.css';
 import DontMiss from './components/dontMiss';
 import EventFunc from './components/eventFunc';
@@ -12,9 +14,44 @@ import Coordinators from './components/coordinators';
 import UpcomingEvents from './components/UpcomingEvents';
 import BG from './BG.mp4';
 import LoadingPage from './components/LoadingPage';
+import axios from 'axios';
 
 
 function App() {
+  
+    const [cards, setcards] = useState([])
+    const [domains, setdomains] = useState([])
+
+    const observerToptoDown = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+  
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-inAnimation')
+  
+        } else {
+          entry.target.classList.remove('fade-inAnimation')
+        }
+  
+      })
+    })
+
+    useEffect(() => {
+      const card = document.querySelectorAll(".card ")
+      const domain = document.querySelectorAll(".flip-card")
+      setcards(card)
+      setdomains(domain)
+      
+    }, [])
+
+    useEffect(() => {
+      cards.forEach(el => {
+        observerToptoDown.observe(el)
+      })
+      domains.forEach(el => {
+        observerToptoDown.observe(el)
+      })
+    })
+  
   return (
     <div className="App">
        {/* <LoadingPage />  */}

@@ -1,11 +1,9 @@
+@keyframes showUp {
+    0%{scale: 0; opacity: 0.5;}
+   
+    100%{scale: 1; opacity: 1;}
+}
 
-/* .explore{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-} */
 .flexColCenter{
     display: flex;
     flex-direction: column;
@@ -36,6 +34,7 @@
     padding: auto 2rem;
     margin: 10px 10px;
     position: relative;
+    gap : 2rem;
 
 }
 

@@ -1,4 +1,8 @@
-
+@keyframes showUp {
+    0%{scale: 0; opacity: 0.5;}
+   
+    100%{scale: 1; opacity: 1;}
+}
 
 ul li::marker{
     color: #391054 ;
@@ -7,6 +11,7 @@ ul li::marker{
 li{
     font-size: larger;
     flex : 1 1 auto;
+    
 }
 
 .ourServicesBlock{
@@ -19,7 +24,7 @@ li{
     font-size: 4rem;
     padding: 1rem;
     color : #391054;
-
+    
 }
 
 .flexCol{
@@ -37,6 +42,7 @@ li{
     width: 75%;
     padding: 0rem 3rem;
     justify-content: flex-start;
+    
 }
 .container{
     width: 100%;
@@ -48,7 +54,10 @@ li{
 }
 .listContainer{
     width: 100%;
-   
+    animation: showUp 1s ease-out 1 forwards;
+    animation-timeline: view();
+    animation-range-start: 0;
+    animation-range-end: 20vh;
 }
 .deptContainer{
     width: 50%;

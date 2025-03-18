@@ -1,17 +1,31 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
 import css from './explore.module.css';
+import "./animation.css";
+import axios from 'axios';
+
 
 const EventFunc = () => {
 
   const [events, setEvents] = useState([])
 
-  useEffect(() => {
-    setEvents(data)
+ 
+    const [users, setUsers] = useState([]);
+  
+    useEffect(() => {
+      axios.get("http://localhost:5000/api/users")
+        .then(response => setUsers(response.data))
+        .catch(error => console.error("❌ Error fetching data:", error));
+    }, []);
 
+  useEffect(() => {
+    setEvents(dataset)
+    setTimeout(() => {
+      console.log(users)
+    }, 1000);
   }, [])
 
-  const data = [{
+  const dataset = [{
     id: '1',
     date: 'Feb12',
     day: 'friday',
@@ -26,7 +40,7 @@ const EventFunc = () => {
     id: '2',
     date: 'Feb12',
     day: 'friday',
-    stripbg: 'green',
+    stripbg: 'red',
     eventHeading: 'Creating Minds Workshop',
     evetDetail: 'A hands-on workshop designed for creative thinker and innovators.',
     from: '11:00',
@@ -82,6 +96,7 @@ const EventFunc = () => {
 
           </div>
         </div>
+        
 
       </>
     )
@@ -110,7 +125,7 @@ const EventFunc = () => {
        
 
           {events.map((event , index) => {
-            return <Events key={index} date={event.date} day={event.day} stripbg={event.stripbg} eventHeading={event.eventHeading} evetDetail={event.evetDetail} from={event.from} to={event.to} mode={event.mode} />
+            return <Events  key={index} date={event.date} day={event.day} stripbg={event.stripbg} eventHeading={event.eventHeading} evetDetail={event.evetDetail} from={event.from} to={event.to} mode={event.mode} />
 
           })}
 

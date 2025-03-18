@@ -124,3 +124,25 @@
         width: 150px;
     }
 }
+
+.logoContainer{
+    animation: moon 2.5s linear infinite alternate;
+}
+
+@keyframes moon {
+    0%{
+        transform: translate(40px,50px);
+        left: 52px;
+  
+    }
+    50%{
+
+        transform: translate(44px,40px);
+        left:63px;
+    }
+    
+    100%{
+        transform: translate(52px,50px);
+        left:54px;
+    }
+}

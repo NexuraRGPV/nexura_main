@@ -45,3 +45,13 @@ video {
 .background-layer[data-theme='dark'] {
   background-color: var(--background-dark);
 }
+
+@keyframes inView {
+  from{transform: translate(-10vw); opacity: 0.8;  filter: blur(4px);} 
+  to{transform: translate(0px); opacity: 1; filter: blur(0px);}
+  
+}
+
+.fade-inAnimation{
+  animation: inView 1s ease-out 1 ;
+}

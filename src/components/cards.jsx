@@ -1,7 +1,8 @@
-import React from 'react';
+
 import styled from 'styled-components';
 
-const DomCards = ({title, image, description}) => {
+const DomCards = ({ title, image, description }) => {
+
   return (
     <StyledWrapper>
       <div className="flip-card">
@@ -15,7 +16,7 @@ const DomCards = ({title, image, description}) => {
           </div>
         </div>
       </div>
-      
+
     </StyledWrapper>
   );
 }

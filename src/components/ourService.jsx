@@ -47,7 +47,7 @@ function OurService() {
     useEffect(() => {
       setData(dataObject)
     }, [])
-    console.log(data)
+
     
 
     const Content = () => {
