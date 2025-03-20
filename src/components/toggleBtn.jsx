@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Switch = () => {
-    const [isDark, setIsDark] = useState(true);
+    const [isDark, setIsDark] = useState(false);
 
     const toggleSwitch = () => {
         const newTheme = !isDark;
@@ -30,6 +30,7 @@ const Switch = () => {
         <StyledWrapper>
             <label className="switch">
                 <input 
+
                     defaultChecked={isDark} 
                     id="checkbox" 
                     type="checkbox"
@@ -53,13 +54,13 @@ const StyledWrapper = styled.div`
   /* Theme Switch */
   /* The switch - the box around the slider */
   .switch {
-    font-size: 17px;
+    font-size: 12px;
     position: relative;
     display: inline-block;
     width: 4em;
     height: 2.2em;
     border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   }
 
   /* Hide default HTML checkbox */
@@ -77,7 +78,7 @@ const StyledWrapper = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #2a2a2a;
+    background-color:rgb(42, 42, 42);
     transition: 0.4s;
     border-radius: 30px;
     overflow: hidden;
@@ -97,12 +98,13 @@ const StyledWrapper = styled.div`
   }
 
   .switch input:checked + .slider {
-    background-color: #00a6ff;
+    background-color:rgba(55, 7, 113, 0.73);
   }
 
   .switch input:checked + .slider:before {
     transform: translateX(1.8em);
-    box-shadow: inset 15px -4px 0px 15px #ffcf48;
+    box-shadow: inset 15px -4px 0px 15px rgb(243, 190, 140),
+                  0px 5px 15px 1px rgb(254, 123, 0);
   }
 
   .star {

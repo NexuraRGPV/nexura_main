@@ -12,7 +12,17 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    color: black; 
+    scroll-behavior: smooth;
+    color: whitesmoke; 
+    transition: color 1s ease-in 250ms;
+    overflow-x: hidden;
+}
+
+h2{
+  color: #5a189a ;
+  text-decoration: double;
+  animation: headingAnimation linear ;
+  animation-timeline: view(60vh auto);
 }
 
 video {
@@ -31,27 +41,41 @@ video {
     height: 100vh;
     width: 100vw;
     top: 0;
+    background-color: var(--background-light);
+    transition: background-color 0.5s ease-in;
+
 }
 :root {
   --background-light: #ffffff78;
   --background-dark: #1a1a1a00;
 }
 
-.background-layer {
-  background-color: var(--background-light);
-  transition: background-color 0.3s ease;
-}
 
 .background-layer[data-theme='dark'] {
   background-color: var(--background-dark);
+  
 }
 
 @keyframes inView {
-  from{transform: translate(-10vw); opacity: 0.8;  filter: blur(4px);} 
-  to{transform: translate(0px); opacity: 1; filter: blur(0px);}
+  from{transform: translate(-10vw); opacity: 0.5; } 
+  to{transform: translate(0px); opacity: 1; }
   
 }
 
 .fade-inAnimation{
-  animation: inView 1s ease-out 1 ;
+  animation: inView 1s ease-in 1 ;
+}
+
+@keyframes headingAnimation {
+  from{
+    transform: translateY(100px);
+    opacity: 0;
+    scale: 0.8;
+  }
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+    scale: 1;
+
+  }
 }

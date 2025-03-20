@@ -11,6 +11,7 @@ body {
 } */
 .containerBg {
   /* background-image: url("../../public/images/BG.png"); */
+  color: #000;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,6 +33,7 @@ body {
   margin: 50px auto;
   text-align: center;
   box-shadow: 0 4px 10px rgba(253, 253, 253, 0.773);
+  background: rgba(255, 255, 255, 0.625);
 }
 
 /* Heading */
@@ -124,4 +126,22 @@ body {
   .contactItem {
     width: 40%;
   }
+}
+
+@keyframes sectionAnimation {
+  from{
+    transform: translateY(100px);
+    opacity: 0;
+    scale: 0.8;
+  }
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+    scale: 1;
+
+  }
+}
+.contactContainer{
+  animation: sectionAnimation linear;
+  animation-timeline: view(100vh 0);
 }

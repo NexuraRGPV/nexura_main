@@ -66,7 +66,7 @@ function OurService() {
          
         return (
             <>
-            <div className={css.container} id="Services">
+            <div className={css.container} >
 
                 <h2 className={css.deptContainer}>
                     {Object.keys(props)[index]}
@@ -78,6 +78,11 @@ function OurService() {
                         })}
                     </ul>
                 </div>
+                <div className={css.arrow} >
+                    <div style={{fontSize: '2rem'}}>
+                        {'>>'}
+                    </div>
+                </div>
             </div>
             </>
             
@@ -86,7 +91,7 @@ function OurService() {
 
     return (
 
-        <div className={css.ourServicesBlock}>
+        <div className={css.ourServicesBlock} id="Services">
             <h1>
                 Our Service and Works
             </h1>

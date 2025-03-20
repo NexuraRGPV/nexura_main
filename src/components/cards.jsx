@@ -28,7 +28,7 @@ const StyledWrapper = styled.div`
     height: 450px;
     perspective: 1000px;
     font-family: sans-serif;
-    margin: 3em 2em;
+    margin: 3em 3em;
     }
     p{
       font-size: 1.6rem;
@@ -75,7 +75,7 @@ bottom: 10px;
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
+    text-align: left;
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
@@ -83,6 +83,10 @@ bottom: 10px;
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
+  .flip-card:hover .flip-card-back {
+    color : white;
+  }
+  
 
   .flip-card-front, .flip-card-back {
     box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
@@ -96,6 +100,7 @@ bottom: 10px;
     backface-visibility: hidden;
     border: 1px solid coral;
     border-radius: 1rem;
+
   }
 
   .flip-card-front {
@@ -114,7 +119,10 @@ border-radius: 40.33px;
   .flip-card-back {
     background: #62297A;
     transform: rotateY(180deg);
-    color:white;
-  }`;
+    color: #62297A;
+    transition : color 0.8s ease-in 250ms ;
+    
+  }
+  `;
 
 export default DomCards;

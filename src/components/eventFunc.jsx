@@ -9,21 +9,21 @@ const EventFunc = () => {
 
   const [events, setEvents] = useState([])
 
- 
+    // backend useState
     const [users, setUsers] = useState([]);
   
+    useEffect(() => {
+      setEvents(dataset)
+      
+    }, [])
+
+    // backend useEffect
     useEffect(() => {
       axios.get("http://localhost:5000/api/users")
         .then(response => setUsers(response.data))
         .catch(error => console.error("❌ Error fetching data:", error));
     }, []);
 
-  useEffect(() => {
-    setEvents(dataset)
-    setTimeout(() => {
-      console.log(users)
-    }, 1000);
-  }, [])
 
   const dataset = [{
     id: '1',
@@ -110,7 +110,9 @@ const EventFunc = () => {
         <div >
 
           <div className={css.heading}>
+            <h2>
             Explore What's Next at Nexura
+            </h2>
           </div>
 
         </div>

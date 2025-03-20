@@ -9,6 +9,7 @@
   width: 100vw;
   margin: 0;
   padding: 0;
+  
 }
 
 /* Header style */
@@ -55,7 +56,7 @@
 
 /* FAQ question styling */
 .faqQuestion {
-  color: rgb(204, 118, 204);
+  color: #e0aaff;
   cursor: pointer;
   display: flex;  
   justify-content: space-between;
@@ -64,6 +65,7 @@
   transition: 0.3s ease;
   padding: 5px;
   border-radius: 17px;
+  transition: all 150ms linear;
 }
 
 .faqQuestion:hover {
@@ -82,6 +84,7 @@
   font-size: 1em;
   line-height: 1.5em;
   color: white;
+  transition: all 1s linear;
 }
 
 /* Responsive Design */
@@ -112,4 +115,23 @@
   .faqAnswer {
     font-size: 0.9em;
   }
+}
+
+@keyframes sectionAnimation {
+  from{
+    transform: translateY(100px);
+    opacity: 0;
+    scale: 1.8;
+  }
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+    scale: 1;
+
+  }
+}
+.faq{
+  animation: sectionAnimation linear;
+
+  animation-timeline: view(100vh 0);
 }

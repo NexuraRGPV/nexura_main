@@ -11,6 +11,7 @@
   align-items: center;
   padding: 20px;
   background-color: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(4px);
   height: 80px;
   width: 100%;
   position: sticky;
@@ -27,7 +28,6 @@
 
 /* Navigation Links */
 .elements ul {
-  font-size: 18px;
   list-style: none;
   display: flex;
   gap: 40px;
@@ -42,9 +42,11 @@
 }
 
 .navbar ul li a {
+  font-size: 1.5rem;
   text-decoration: none;
   position: relative;
   color: white;
+
 }
 
 .navbar ul li a::after {
@@ -54,7 +56,7 @@
   bottom: -4px;
   width: 0%;
   height: 3px;
-  background: #8B22B8;
+  background: #9d4edd;
   transition: all 0.3s ease-in-out;
   transform: translateX(-50%);
 }
@@ -65,7 +67,7 @@
 
 
 .navbar ul li a:hover {
-  color: #8B22B8;
+  color: #9b5de5;
 }
 
 /* ✅ Hamburger Menu for Mobile Screens */

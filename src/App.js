@@ -18,58 +18,61 @@ import axios from 'axios';
 
 
 function App() {
-  
-    const [cards, setcards] = useState([])
-    const [domains, setdomains] = useState([])
 
-    const observerToptoDown = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-  
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-inAnimation')
-  
-        } else {
-          entry.target.classList.remove('fade-inAnimation')
-        }
-  
-      })
+  const [cards, setcards] = useState([])
+  const [domains, setdomains] = useState([])
+
+  const observerToptoDown = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-inAnimation')
+
+      } else {
+        entry.target.classList.remove('fade-inAnimation')
+      }
+
     })
+  })
 
-    useEffect(() => {
-      const card = document.querySelectorAll(".card ")
-      const domain = document.querySelectorAll(".flip-card")
-      setcards(card)
-      setdomains(domain)
-      
-    }, [])
+  useEffect(() => {
+    const card = document.querySelectorAll(".card ")
+    const domain = document.querySelectorAll(".flip-card")
+    setcards(card)
+    setdomains(domain)
 
-    useEffect(() => {
-      cards.forEach(el => {
-        observerToptoDown.observe(el)
-      })
-      domains.forEach(el => {
-        observerToptoDown.observe(el)
-      })
+  }, [])
+
+  useEffect(() => {
+    cards.forEach(el => {
+      observerToptoDown.observe(el)
     })
-  
+    domains.forEach(el => {
+      observerToptoDown.observe(el)
+    })
+  })
+
   return (
     <div className="App">
-       {/* <LoadingPage />  */}
+      {/* <LoadingPage />  */}
       <video className="background-video" autoPlay loop muted>
         <source src={BG} type="video/mp4" />
-      </video>
-      <div className="background-layer" data-theme="light" ></div>
-      <NavBar/>
-      <HomePage />
-      <Intro />
-      <Domains/>
-      <Coordinators />
-      <UpcomingEvents />
-      <EventFunc/>
-      <DontMiss/>
-      <OurServices />
-      <FAQ/>
-      <Contact />
+      </video>
+      <div className="background-layer" data-theme="dark" ></div>
+      <div className='containComponents'>
+
+        <NavBar />
+        <HomePage />
+        <Intro />
+        <Domains />
+        <Coordinators />
+        <UpcomingEvents />
+        <EventFunc />
+        <DontMiss />
+        <OurServices />
+        <FAQ />
+        <Contact />
+      </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className={styles.containerBg} id="Contact">
     <div className={styles.contactContainer} id="ContactCont">
-      <h2 className={`${styles.bk} ${styles.heading}`}>Get in touch</h2>
+      <h3 className={`${styles.bk} ${styles.heading}`}>Get in touch</h3>
       <p>
         Whether you have a question, feedback, or just want to say hello, feel free to
         reach out. Our team is here to help.

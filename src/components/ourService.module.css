@@ -1,17 +1,17 @@
 @keyframes showUp {
-    0%{scale: 0; opacity: 0.5;}
+    0%{scale: 0.8; opacity: 0.5;}
    
     100%{scale: 1; opacity: 1;}
 }
 
 ul li::marker{
-    color: #391054 ;
+    color: #7209b7 ;
     
 }
 li{
-    font-size: larger;
+    font-size: large;
     flex : 1 1 auto;
-    
+    font-weight: 300;
 }
 
 .ourServicesBlock{
@@ -23,7 +23,7 @@ li{
 .ourServicesBlock h1{
     font-size: 4rem;
     padding: 1rem;
-    color : #391054;
+    color : #7209b7;
     
 }
 
@@ -31,15 +31,15 @@ li{
     display: flex;
     flex-direction: column;
     margin: 3rem 0;
-    color: #521d75;
+    /* color: #3a0ca3; */
     font-weight: bold;
 }
 .flex{
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
-    row-gap: 0;
-    width: 75%;
+    row-gap: 0.4em;
+    width: 85%;
     padding: 0rem 3rem;
     justify-content: flex-start;
     
@@ -50,7 +50,7 @@ li{
   
     display: flex;
     align-items: center;
-    border-bottom: 2px solid #391054;
+    border-bottom: 2px solid #7209b7;
 }
 .listContainer{
     width: 100%;
@@ -61,6 +61,8 @@ li{
 }
 .deptContainer{
     width: 50%;
+    font-weight: 800;
+    font-size: 2rem;
 
 }
 
@@ -85,4 +87,32 @@ li{
         width: 100%;
         margin: auto;
     }
+}
+
+@keyframes sectionAnimation {
+    from{
+      transform: translateY(100px);
+      opacity: 0;
+      scale: 1.1;
+    }
+    to{
+      transform: translateY(0px);
+      opacity: 1;
+      scale: 1;
+  
+    }
+  }
+
+.container{
+
+    animation: sectionAnimation linear;
+    animation-timeline: view(90vh 0);
+}
+h1{
+    animation: sectionAnimation linear;
+    animation-timeline: view(80% 0);
+}
+h2{
+    animation: sectionAnimation linear ;
+    animation-timeline: view(80% 0);
 }
