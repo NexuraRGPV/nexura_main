@@ -1,13 +1,19 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-require("dotenv").config();
 
 require("dotenv").config();
+
+const MONGO_URI = process.env.MONGO_URI;
+console.log("MongoDB URI:", process.env.MONGO_URI);
+
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
+})
+.then(() => console.log('MongoDB connected successfully'))
+.catch(err => console.error('Connection error:', err));
+
 
 
 const app = express();
