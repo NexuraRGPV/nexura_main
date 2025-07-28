@@ -7,8 +7,7 @@ const UpcomingEvents = () => {
     <div className={styles.container} id="Events">
       {/* Text Content */}
       <div className={styles.content}>
-        <p className={styles.eventLabel}>Events</p>
-        <h2 className={styles.heading}>Upcoming Events!</h2>
+        <h2 className={styles.heading}>Events!</h2>
         <p className={styles.description}>
           Join us at Nexura Club for an unforgettable experience! We bring
           together enthusiasts and experts for a day of learning, networking,
