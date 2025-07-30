@@ -15,6 +15,7 @@ import UpcomingEvents from './components/UpcomingEvents';
 import BG from './BG.mp4';
 import LoadingPage from './components/LoadingPage';
 import axios from 'axios';
+import Projects from './components/our-project';
 
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
         <Domains />
         <Coordinators />
         <UpcomingEvents />
+        <Projects />
         <EventFunc />
         <DontMiss />
         <OurServices />
