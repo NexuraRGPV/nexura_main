@@ -191,11 +191,12 @@ function Projects() {
 
       {videoUrl && (
         <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={() => setVideoUrl(null)}>
+         <div className="close" onClick={() => setVideoUrl(null)}>
               &times;
-            </span>
-            {videoUrl.includes("youtube") ? (
+          </div>
+            <div className="modal-content">
+            
+              {videoUrl.includes("youtube") ? (
               <iframe
                 src={videoUrl}
                 title="Project Video"
