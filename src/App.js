@@ -65,11 +65,11 @@ function App() {
         <HomePage />
         <Intro />
         <Domains />
-        <Coordinators />
         <UpcomingEvents />
         <EventFunc />
         <DontMiss />
         <OurServices />
+        <Coordinators />
         <FAQ />
         <Contact />
       </div>
