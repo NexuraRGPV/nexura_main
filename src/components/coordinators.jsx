@@ -9,21 +9,21 @@ const Coordinators = () => {
     // Test data
     const faculty = [
         {
-            image: "/people/rishabh tomar.png",
-            name: "Rishabh Tomar",
-            position: "B.Tech in Automobile Engineering",
+            image: "/people/mr. aditya_pratap_singh.jpeg",
+            name: "Mr. Aditya Pratap Singh",
+            position: "Assistant Professor of Department of Automobile Engineering | Faculty Coordinator of Nexura",
             description: "Test description"
         },
         {
-            image: "/people/rishabh tomar.png",
-            name: "Rishabh Tomar",
-            position: "B.Tech in Automobile Engineering",
+            image: "/people/alka bani maam.jpeg",
+            name: "Dr. Alka Bani Agrawal",
+            position: "Head of Department of Automobile Engineering chief Patron | Head of Nexura",
             description: "Test description"
         },
         {
-            image: "/people/rishabh tomar.png",
-            name: "Rishabh Tomar",
-            position: "B.Tech in Automobile Engineering",
+            image: "/people/mr. vikas verma.jpeg",
+            name: "Mr. Vikas Verma",
+            position: "Assistant Professor at Department of Automobile Engineering | Faculty Coordinator of Nexura",
             description: "Test description"
         },
     
@@ -38,7 +38,7 @@ const Coordinators = () => {
         },
 
         {
-            image: "/people/Pawan Sir.jpg",
+            image: "/people/PawanSir.jpg",
             name: "Pawan Soni",
             position: "Head of 3D modelling and Animation | head of Parametric Modelling and Simulation | Executive Board member , Nexura ",
             description:"Pawan Soni, a B.Tech student in Automobile Engineering at UIT-RGPV Bhopal, is passionate about 3D animation, VFX, and parametric modeling. As Head of 3D Modeling and Animation and an Executive Board Member at Nexura, he brings technical ideas to life with high-quality visuals. Skilled in SolidWorks and ANSYS simulations, he blends creativity with engineering precision. Always eager to innovate, Pawan pushes the boundaries of 3D visualization and simulation, contributing to cutting-edge projects."
@@ -56,7 +56,7 @@ const Coordinators = () => {
             description: "Vishal Singh Thakur, a Mechanical Engineering student at UIT-RGPV, Bhopal, is passionate about 3D Animation and UI/UX Design. As a UI/UX Mentor and active member at Nexura, he is refining his skills to create intuitive digital experiences. With four months of hands-on experience, he blends creativity with technology. Beyond design, he enjoys cricket, singing, eSports, dancing, and reading. Always eager to learn and innovate, Vishal aims to make an impact in both technical and creative fields."
         },
         {
-            image: "/people/Rishabh.png",
+            image: "/people/Rishabh.jpg",
             name: "Rishabh Tomar",
             position: "Senior Member - 3D Animation and Modelling,Nexura",
             description: "I'm Rishabh Tomar,Currently pursuing a B.Tech in Automobile Engineering from UIT RGPV, A passionate 3D artist with a keen eye for detail and creativity. After completing my schooling from St. Mary's Residential H.S. School. Alongside my academic pursuits in the dynamic field of automobile engineering, I also explores the world of 3D modeling, bringing my imaginative ideas to life through my artistic skills. Combining technical knowledge with artistic talent, I am dedicated to refining my craft and expanding my expertise in field of 3D, aiming to make a mark in the intersection of technology and design."
@@ -77,6 +77,12 @@ const Coordinators = () => {
             name: "Mohammad Sameer ",
             position: "B.Tech in Automobile Engineering",
             description: "Mohammad Sameer, a Petrochemical Technology Engineering student at UIT-RGPV, Bhopal, is passionate about web development. A member of Nexura's Front-End Web Development team, he has four months of experience, working on projects like Tic-Tac-Toe, Stone-Paper-Scissors, and a Currency Converter. Currently exploring Tailwind CSS, he focuses on modern, efficient design. Beyond coding, he enjoys outdoor sports, driving, and gaming. With a growth mindset, he aims to master full-stack development and impact web technologies."
+        },
+        {
+            image: "/people/Ansh Sir.jpg",
+            name: "Ansh Juneja ",
+            position: "Pre-Final year Electronic Engineering Student |PR & HR Enthusiast",
+            description: "Ansh Juneja a pre-final year student at UIT-RGPV, specializing in Electronics and Communication Engineering. Passionate about technology, I have gained hands-on experience in circuit design, embedded systems, and telecommunications through both academic learning and practical projects. I also place a strong emphasis on effective communication and teamwork, understanding their critical role in successful project execution and professional growth."
         },
         
         // Add more test data if needed

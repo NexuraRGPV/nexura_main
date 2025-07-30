@@ -66,12 +66,12 @@ function App() {
         <HomePage />
         <Intro />
         <Domains />
-        <Coordinators />
         <UpcomingEvents />
         <Projects />
         <EventFunc />
         <DontMiss />
         <OurServices />
+        <Coordinators />
         <FAQ />
         <Contact />
       </div>
