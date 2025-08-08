@@ -70,7 +70,6 @@ function App() {
         <Projects />
         <EventFunc />
         <DontMiss />
-        <Projects />
         <OurServices />
         <Coordinators />
         <FAQ />
